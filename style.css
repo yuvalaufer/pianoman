@@ -31,16 +31,15 @@ body {
     max-width: 1000px;
     margin: 30px auto;
     padding: 30px;
-    /* ********** שינוי: הגדרת תמונת רקע לקונטיינר המרכזי ********** */
-    background-image: url('images/bacground.jpg'); 
+    /* ********** תיקון קריטי: שם הקובץ שונה ל-background.jpg ********** */
+    background-image: url('images/background.jpg'); 
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.6); /* רקע לבן שקוף למקרה שתמונת הרקע לא מספיק כהה */
     background-blend-mode: overlay; /* מאפשר לשקף את הצבע הלבן על התמונה */
+    background-position: center center; /* יישור רקע הקונטיינר */
     border-radius: 12px; 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
-
-/* ... (שאר ה-CSS נשאר זהה לתיקונים האחרונים) ... */
 
 
 h1, h2, h3 {
@@ -124,3 +123,48 @@ ul li::before {
 .whatsapp-button {
     display: flex; /* Flexbox לטובת יישור אנכי */
     align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 12px 7px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.whatsapp-button img {
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+    filter: invert(100%);
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* כותרת האתר ב-index.html */
+.main-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    border-bottom: 3px solid var(--secondary-color);
+}
+
+.main-header h1 {
+    font-size: 4.5em;
+    margin-bottom: 8px;
+    color: var(--primary-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.main-header p {
+    font-size: 2em; 
+    color: var(--text-color);
+    margin-top: 0;
+    font-weight: bold; /*
