@@ -1,0 +1,277 @@
+:root {
+    /* הגדרת משתני צבעים שניתן לשנות בקלות */
+    --primary-color: #5A5A8E; /* סגול רך ונעים */
+    --secondary-color: #8C8CD7; /* גוון בהיר יותר של סגול */
+    --accent-color: #E2B04B; /* צהוב-כתום חם להדגשות */
+    --text-color: #333333;
+    --light-bg: #F4F4F9; /* רקע בהיר ונקי */
+    --button-hover: #C08C2B;
+}
+
+/* הגדרות גלובליות */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    direction: rtl; /* כיוון קריאה מימין לשמאל */
+    text-align: right; /* יישור הטקסט לימין */
+    line-height: 1.6;
+    background-color: var(--light-bg);
+    background-image: url('images/site_background.jpg'); /* רקע כללי מהתמונה */
+    background-size: cover; /* מכסה את כל הדף */
+    background-attachment: fixed; /* הרקע מקובע בעת גלילה */
+    background-position: center center; /* ממורכז */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* רקע לבן שקוף מעט */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* כפתורים כלליים */
+.button {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--primary-color);
+}
+
+.button.accent {
+    background-color: var(--accent-color);
+}
+
+.button.accent:hover {
+    background-color: var(--button-hover);
+}
+
+/* כפתור וואטסאפ */
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366; /* צבע ירוק וואטסאפ */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin: 10px 5px;
+}
+
+.whatsapp-button img {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px; /* רווח מהטקסט */
+}
+
+.whatsapp-button:hover {
+    background-color: #1DA851;
+}
+
+
+/* כותרת האתר ב-index.html */
+.main-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--secondary-color);
+}
+
+.main-header h1 {
+    font-size: 3.5em;
+    margin-bottom: 5px;
+    color: var(--primary-color);
+}
+
+.main-header p {
+    font-size: 1.8em;
+    color: var(--text-color);
+    margin-top: 0;
+}
+
+/* סקשן "מי אני" */
+.about-me-section {
+    display: flex;
+    flex-direction: row-reverse; /* כדי שהתמונה תהיה מימין ב-RTL */
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 30px;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-image-container {
+    flex-shrink: 0; /* מונע מהתמונה להתכווץ */
+    width: 200px; /* גודל התמונה */
+    height: 200px;
+    border-radius: 50%; /* הופך לעיגול */
+    overflow: hidden; /* חותך את מה שחורג מהעיגול */
+    border: 5px solid var(--accent-color); /* מסגרת לתמונה */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* מבטיח שהתמונה תכסה את כל השטח בלי להתעוות */
+}
+
+.about-me-text {
+    flex-grow: 1; /* מאפשר לטקסט לתפוס את השטח שנותר */
+}
+
+.about-me-text h2 {
+    margin-top: 0;
+    text-align: right;
+    font-size: 2.2em;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+}
+
+/* סקשן הניווט הראשי */
+.navigation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 180px מינימום, גמיש */
+    gap: 30px; /* רווח בין התמונות */
+    justify-content: center; /* ממורכז את הגריד */
+    margin-top: 50px;
+}
+
+.nav-item {
+    text-align: center;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.nav-item a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.nav-item img {
+    width: 150px; /* גודל תמונת הניווט */
+    height: 150px;
+    border-radius: 50%; /* הופך לעיגול */
+    object-fit: cover;
+    border: 3px solid var(--secondary-color); /* מסגרת */
+    margin-bottom: 10px;
+    transition: border-color 0.2s ease;
+}
+
+.nav-item:hover img {
+    border-color: var(--accent-color);
+}
+
+.nav-item p {
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* סקשן תוכן בדפי המשנה */
+.subpage-content {
+    padding: 30px;
+    background-color: var(--light-bg);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.subpage-content h2 {
+    text-align: right;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.contact-buttons {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 2px solid var(--secondary-color);
+    padding-top: 20px;
+}
+
+/* Footer כללי */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0 0 10px 10px; /* פינות מעוגלות רק למטה */
+}
+
+/* רספונסיביות בסיסית */
+@media (max-width: 768px) {
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+    .main-header h1 {
+        font-size: 2.5em;
+    }
+    .main-header p {
+        font-size: 1.4em;
+    }
+    .about-me-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    .profile-image-container {
+        width: 150px;
+        height: 150px;
+    }
+    .about-me-text h2 {
+        text-align: center;
+    }
+    .navigation-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+    .nav-item img {
+        width: 100px;
+        height: 100px;
+    }
+    .button, .whatsapp-button {
+        display: block;
+        width: calc(100% - 10px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
