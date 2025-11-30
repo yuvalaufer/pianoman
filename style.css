@@ -1,12 +1,12 @@
 :root {
-    /* צבעים חדשים: עשירים ורכים יותר */
-    --primary-color: #6A1B9A; /* סגול עמוק, כמו אבן אמטיסט */
-    --secondary-color: #9C27B0; /* גוון לילך-סגול תוסס */
+    /* צבעים חדשים: עשירים ורכים יותר בגווני כחול-ירוק */
+    --primary-color: #0A4F5B; /* כחול-ירוק כהה ועמוק לכותרות */
+    --secondary-color: #2C7A7B; /* גוון טורקיז מעט בהיר יותר, משלים */
     --accent-color: #FFD700; /* זהב בהיר ומבריק להדגשות */
-    --text-color: #2C3E50; /* כחול כהה עמוק לקריאות טובה */
-    --light-bg: #F8F4F9; /* רקע בהיר עם נגיעה סגולה */
+    --text-color: #1A365D; /* כחול כהה מאוד לטקסט רגיל לקריאות מעולה */
+    --light-bg: #F8F4F9; /* רקע בהיר */
     --button-hover: #E6C200; /* גוון זהב כהה יותר בריחוף */
-    --footer-bg: #4A148C; /* סגול כהה לרגליים */
+    --footer-bg: #073840; /* כחול-ירוק כהה יותר לרגליים */
     --card-bg: #FFFFFF; /* לבן נקי לכרטיסים/סקשנים */
     --border-color: #E0E0E0; /* גבולות עדינים */
 }
@@ -19,7 +19,7 @@ body {
     color: var(--text-color);
     direction: rtl; /* כיוון קריאה מימין לשמאל */
     text-align: right; /* יישור הטקסט לימין */
-    line-height: 1.7; /* רווח שורות נוח יותר */
+    line-height: 1.7; 
     background-color: var(--light-bg);
     background-image: url('images/site_background.jpg'); /* רקע כללי מהתמונה */
     background-size: cover;
@@ -30,21 +30,22 @@ body {
 .container {
     max-width: 1000px;
     margin: 30px auto;
-    padding: 30px; /* הגדלת ריווח פנימי */
-    background-color: rgba(255, 255, 255, 0.95); /* רקע לבן שקוף יותר */
-    border-radius: 12px; /* פינות מעוגלות יותר */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* צל עמוק יותר */
+    padding: 30px;
+    /* ********** הורדת שקיפות ל-0.7 כדי שרקע ה-body יבלוט ********** */
+    background-color: rgba(255, 255, 255, 0.7); 
+    border-radius: 12px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
 }
 
 h1, h2, h3 {
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 25px;
-    font-weight: 700; /* פונט עבה יותר לכותרות */
+    font-weight: 700;
 }
 
 h1 {
-    font-size: 3.8em; /* הגדלת כותרת ראשית */
+    font-size: 3.8em;
 }
 
 h2 {
@@ -56,11 +57,11 @@ h3 {
 }
 
 p {
-    margin-bottom: 18px; /* ריווח פסקאות גדול יותר */
+    margin-bottom: 18px;
 }
 
 ul {
-    list-style: none; /* הסרת בולטים ברירת מחדל */
+    list-style: none;
     padding-right: 20px;
     margin-bottom: 25px;
 }
@@ -68,11 +69,11 @@ ul {
 ul li {
     position: relative;
     margin-bottom: 10px;
-    padding-right: 25px; /* רווח לבולט מותאם אישית */
+    padding-right: 25px;
 }
 
 ul li::before {
-    content: '🎵'; /* בולט מותאם אישית של תו מוזיקה */
+    content: '🎵';
     color: var(--secondary-color);
     position: absolute;
     right: 0;
@@ -85,39 +86,39 @@ ul li::before {
     display: inline-block;
     background-color: var(--secondary-color);
     color: white;
-    padding: 14px 28px; /* הגדלת כפתורים */
-    border-radius: 30px; /* כפתורים עגולים יותר */
+    padding: 14px 28px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.2s ease;
     margin: 12px 7px;
     border: none;
     cursor: pointer;
-    letter-spacing: 0.5px; /* רווח אותיות קל */
+    letter-spacing: 0.5px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
     background-color: var(--primary-color);
-    transform: translateY(-2px); /* אפקט ריחוף קל */
+    transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .button.accent {
     background-color: var(--accent-color);
-    color: var(--text-color); /* שינוי צבע טקסט לכפתור ההדגשה */
+    color: var(--text-color);
 }
 
 .button.accent:hover {
     background-color: var(--button-hover);
-    color: white; /* טקסט לבן בריחוף */
+    color: white;
 }
 
 /* כפתור וואטסאפ */
 .whatsapp-button {
-    display: flex; /* שינוי מ-inline-flex ליישור אחיד עם flexbox באב */
+    display: flex; /* Flexbox לטובת יישור אנכי */
     align-items: center;
-    background-color: #25D366; /* צבע ירוק וואטסאפ */
+    background-color: #25D366;
     color: white;
     padding: 12px 25px;
     border-radius: 30px;
@@ -129,10 +130,10 @@ ul li::before {
 }
 
 .whatsapp-button img {
-    width: 26px; /* גודל סמל וואטסאפ */
+    width: 26px;
     height: 26px;
     margin-left: 10px;
-    filter: invert(100%); /* הופך את הסמל ללבן אם הוא שחור */
+    filter: invert(100%);
 }
 
 .whatsapp-button:hover {
@@ -147,20 +148,21 @@ ul li::before {
     text-align: center;
     margin-bottom: 50px;
     padding-bottom: 25px;
-    border-bottom: 3px solid var(--secondary-color); /* גבול עבה יותר */
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .main-header h1 {
-    font-size: 4.5em; /* כותרת ראשית גדולה יותר */
+    font-size: 4.5em;
     margin-bottom: 8px;
     color: var(--primary-color);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08); /* צל קל לכותרת */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .main-header p {
-    font-size: 2em; /* טקסט קטן יותר בכותרת גדל */
+    font-size: 2em; 
     color: var(--text-color);
     margin-top: 0;
+    font-weight: bold; /* הדגשת "איש-פסנתר" */
 }
 
 /* סקשן "מי אני" */
@@ -168,22 +170,22 @@ ul li::before {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    gap: 40px; /* רווח גדול יותר */
+    gap: 40px;
     margin-bottom: 60px;
     padding: 40px;
-    background-color: var(--card-bg); /* רקע לבן לסקשן */
+    background-color: var(--card-bg);
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid var(--border-color); /* גבול עדין */
+    border: 1px solid var(--border-color);
 }
 
 .profile-image-container {
     flex-shrink: 0;
-    width: 220px; /* גודל תמונה גדול יותר */
+    width: 220px;
     height: 220px;
     border-radius: 50%;
     overflow: hidden;
-    border: 6px solid var(--accent-color); /* מסגרת עבה יותר בצבע הדגשה */
+    border: 6px solid var(--accent-color);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -200,7 +202,7 @@ ul li::before {
 .about-me-text h2 {
     margin-top: 0;
     text-align: right;
-    font-size: 2.8em; /* כותרת "מי אני" גדלה */
+    font-size: 2.8em;
     border-bottom: 3px solid var(--secondary-color);
     padding-bottom: 15px;
     color: var(--primary-color);
@@ -209,8 +211,8 @@ ul li::before {
 /* סקשן הניווט הראשי */
 .navigation-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* גודל מינימלי גדול יותר */
-    gap: 35px; /* רווח גדול יותר בין התמונות */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
     justify-content: center;
     margin-top: 60px;
 }
@@ -218,17 +220,17 @@ ul li::before {
 .nav-item {
     text-align: center;
     background-color: var(--card-bg);
-    padding: 20px; /* ריווח פנימי גדול יותר */
-    border-radius: 15px; /* פינות מעוגלות יותר */
+    padding: 20px;
+    border-radius: 15px;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.09);
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
     border: 1px solid var(--border-color);
 }
 
 .nav-item:hover {
-    transform: translateY(-8px); /* אפקט ריחוף משמעותי יותר */
+    transform: translateY(-8px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    background-color: var(--light-bg); /* רקע בהיר יותר בריחוף */
+    background-color: var(--light-bg);
 }
 
 .nav-item a {
@@ -237,23 +239,23 @@ ul li::before {
 }
 
 .nav-item img {
-    width: 170px; /* גודל תמונת הניווט גדל */
+    width: 170px;
     height: 170px;
     border-radius: 50%;
     object-fit: cover;
-    border: 4px solid var(--secondary-color); /* מסגרת עבה יותר */
+    border: 4px solid var(--secondary-color);
     margin-bottom: 15px;
     transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-item:hover img {
-    border-color: var(--accent-color); /* מסגרת הדגשה בריחוף */
-    transform: scale(1.05); /* הגדלת תמונה קלה */
+    border-color: var(--accent-color);
+    transform: scale(1.05);
 }
 
 .nav-item p {
-    font-weight: 700; /* טקסט עבה יותר */
-    font-size: 1.25em; /* גודל טקסט גדול יותר */
+    font-weight: 700;
+    font-size: 1.25em;
     margin: 0;
     color: var(--primary-color);
 }
@@ -279,7 +281,7 @@ ul li::before {
     display: flex;
     justify-content: center;
     gap: 20px;
-    flex-wrap: wrap; /* שבירת שורות במסכים קטנים */
+    flex-wrap: wrap;
 }
 
 .music-links .button {
@@ -287,17 +289,16 @@ ul li::before {
     font-size: 1.1em;
 }
 
-/* איזור כפתורי יצירת קשר - תוקן ליישור אנכי ע"י Flexbox */
+/* איזור כפתורי יצירת קשר - Flexbox ליישור אנכי */
 .contact-buttons {
     text-align: center;
     margin-top: 50px;
     border-top: 3px solid var(--secondary-color);
     padding-top: 30px;
     
-    /* תיקון היישור: Flexbox */
     display: flex; 
-    justify-content: center; /* ממורכז אופקית */
-    align-items: center; /* יישור אנכי (בגובה) */
+    justify-content: center; 
+    align-items: center; 
     flex-wrap: wrap; 
 }
 
@@ -306,7 +307,7 @@ footer {
     text-align: center;
     margin-top: 60px;
     padding: 25px;
-    background-color: var(--footer-bg); /* צבע סגול כהה לרגליים */
+    background-color: var(--footer-bg);
     color: white;
     border-radius: 0 0 12px 12px;
     font-size: 0.95em;
