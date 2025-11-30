@@ -168,3 +168,7 @@ ul li::before {
     color: var(--text-color);
     margin-top: 0;
     font-weight: bold; /*
+/* קוד בדיקה זמני */
+.navigation-grid {
+    border: 5px dashed red !important; /* גבול אדום שיאשר שהבלוק קיים */
+}
