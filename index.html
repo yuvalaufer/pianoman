@@ -19,15 +19,16 @@
         .social-link {
             display: flex; 
             align-items: center;
-            justify-content: space-between; 
+            justify-content: flex-start; /* מצמיד את האלמנטים לימין */
+            gap: 10px; /* מרווח קטן בין הטקסט ללוגו */
             
-            width: 320px; /* רוחב קבוע ואחיד */
+            width: 260px; /* רוחב קבוע וצמצום המסגרת */
             
-            background-color: #5D99C6; /* כחול כהה (Social BG) */
+            background-color: #5D99C6; /* כחול כהה */
             color: white; 
             text-decoration: none; 
             
-            padding: 10px 25px; 
+            padding: 10px 15px; /* צמצום ה-padding */
             border-radius: 50px; 
             font-weight: bold;
             transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
@@ -45,12 +46,15 @@
 
         .social-link .social-name {
             font-size: 1.1em;
+            margin-right: auto; /* דוחף את הטקסט שמאלה */
         }
 
         .social-link img {
             width: 30px; 
             height: 30px;
             border-radius: 50%;
+            margin-left: 10px; /* מרווח קטן משמאל (כיוון ה-RTL) */
+            order: -1; /* מכריח את הלוגו להיות משמאל לטקסט */
         }
     </style>
     </head>
@@ -99,53 +103,4 @@
             </a>
         </div>
         <section class="navigation-grid">
-            <div class="nav-item">
-                <a href="lessons.html">
-                    <img src="images/lessons.jpg" alt="שיעורי פסנתר">
-                    <p>שיעורי פסנתר</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="recordings.html">
-                    <img src="images/recordings.jpg" alt="אולפן הקלטות ביתי">
-                    <p>אולפן הקלטות ביתי</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="translate.html">
-                    <img src="images/translate.jpg" alt="תרגום שירים">
-                    <p>תרגום שירים</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="vocals.html">
-                    <img src="images/vocals.jpg" alt="עיבודים קוליים">
-                    <p>עיבודים קוליים</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="playback.html">
-                    <img src="images/playback.jpg" alt="ליווי מוזיקלי בתיאטרון פלייבק">
-                    <p>ליווי מוזיקלי בתיאטרון פלייבק</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="accompanying.html">
-                    <img src="images/accompanying.jpg" alt="ליווי זמרות וזמרים">
-                    <p>ליווי זמרות וזמרים</p>
-                </a>
-            </div>
-            <div class="nav-item">
-                <a href="mymusic.html">
-                    <img src="images/mymusic.jpg" alt="המוזיקה שלי">
-                    <p>המוזיקה שלי</p>
-                </a>
-            </div>
-        </section>
-
-        <footer>
-            <p>&copy; 2025 יובל לאופר. כל הזכויות שמורות.</p>
-        </footer>
-    </div>
-</body>
-</html>
+            <div class="
