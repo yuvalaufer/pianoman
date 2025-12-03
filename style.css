@@ -202,6 +202,29 @@ ul li::before {
 }
 /* *************************************************************** */
 
+/* ********** עיצוב קישורי רשתות חברתיות (חדש) ********** */
+.social-links {
+    display: flex; /* מסדר את האייקונים בשורה */
+    justify-content: center; /* ממקם אותם במרכז */
+    align-items: center;
+    gap: 20px; /* מרווח בין אייקונים */
+    margin: 20px 0 40px 0; /* מרווח מלמעלה ומלמטה */
+}
+
+.social-link img {
+    width: 45px; /* גודל האייקון */
+    height: 45px;
+    border-radius: 50%; /* לוגו עגול */
+    transition: transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* צל קטן להבלטה */
+}
+
+.social-link img:hover {
+    transform: scale(1.15); /* הגדלה קלה במעבר עכבר */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+/* ************************************************** */
+
 
 /* סקשן הניווט הראשי */
 .navigation-grid {
@@ -371,6 +394,12 @@ footer {
     .subpage-content h2 {
         font-size: 2em;
     }
+
+    /* רספונסיביות סושיאל */
+    .social-link img {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -401,5 +430,11 @@ footer {
     .button, .whatsapp-button {
         padding: 10px 15px;
         font-size: 0.9em;
+    }
+    
+    /* רספונסיביות סושיאל */
+    .social-link img {
+        width: 35px;
+        height: 35px;
     }
 }
