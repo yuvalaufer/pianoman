@@ -9,6 +9,8 @@
     --footer-bg: #073840; 
     --card-bg: #FFFFFF; 
     --border-color: #E0E0E0; 
+    --social-bg-color: #C1E6D3; /* ירוק בקבוק בהיר מותאם */
+    --social-hover-color: #A9D5C0; /* ירוק כהה יותר בריחוף */
 }
 
 /* הגדרות גלובליות */
@@ -31,7 +33,6 @@ body {
     max-width: 1000px;
     margin: 30px auto;
     padding: 30px;
-    /* ********** רקע פנימי מתוקן: background.jpg ********** */
     background-image: url('images/background.jpg'); 
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.6); 
@@ -184,7 +185,7 @@ ul li::before {
     border: 1px solid var(--border-color);
 }
 
-/* ********** החזרה למסגרת עגולה לתמונת הפרופיל ********** */
+/* ********** תמונת פרופיל עגולה ********** */
 .profile-image-container {
     flex-shrink: 0;
     width: 220px; 
@@ -202,26 +203,55 @@ ul li::before {
 }
 /* *************************************************************** */
 
-/* ********** עיצוב קישורי רשתות חברתיות (חדש) ********** */
+/* ********** עיצוב קישורי רשתות חברתיות (מתוקן) ********** */
 .social-links {
-    display: flex; /* מסדר את האייקונים בשורה */
-    justify-content: center; /* ממקם אותם במרכז */
+    display: flex; 
+    flex-direction: column; /* מסדר את התיבות בטור */
     align-items: center;
-    gap: 20px; /* מרווח בין אייקונים */
-    margin: 20px 0 40px 0; /* מרווח מלמעלה ומלמטה */
+    gap: 15px; 
+    margin: 20px auto 40px auto; /* ממקם במרכז הדף */
+    width: 90%; 
+    max-width: 400px; /* רוחב מקסימלי לתיבות */
+}
+
+.social-link {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; /* מפריד את הטקסט והלוגו לקצוות */
+    
+    background-color: var(--social-bg-color); /* ירוק בקבוק בהיר */
+    color: var(--text-color);
+    text-decoration: none; 
+    
+    width: 100%; 
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* מסגרת מובלטת */
+}
+
+.social-link:hover {
+    background-color: var(--social-hover-color); 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+}
+
+.social-link .social-name {
+    font-size: 1.1em;
+    margin-left: 10px; /* רווח קל מהלוגו */
+    font-weight: bold;
 }
 
 .social-link img {
-    width: 45px; /* גודל האייקון */
-    height: 45px;
-    border-radius: 50%; /* לוגו עגול */
+    width: 30px; 
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 15px; /* מרווח בין הלוגו לטקסט (RTL) */
     transition: transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* צל קטן להבלטה */
 }
 
-.social-link img:hover {
-    transform: scale(1.15); /* הגדלה קלה במעבר עכבר */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+.social-link:hover img {
+    transform: scale(1.05);
 }
 /* ************************************************** */
 
@@ -396,9 +426,12 @@ footer {
     }
 
     /* רספונסיביות סושיאל */
+    .social-link {
+        max-width: 100%;
+    }
     .social-link img {
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -434,7 +467,7 @@ footer {
     
     /* רספונסיביות סושיאל */
     .social-link img {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
     }
 }
