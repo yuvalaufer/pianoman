@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="style.css">
     
     <style>
-        /* CSS מבודד ל-Social Links */
         .social-links {
             display: flex; 
             flex-direction: column; 
@@ -20,9 +19,9 @@
         .social-link {
             display: flex; 
             align-items: center;
-            justify-content: space-between; 
+            justify-content: flex-start; /* מצמיד את האלמנטים לימין */
             
-            width: 260px; /* גודל קבוע ומתוקן */
+            width: 260px; 
             
             background-color: #5D99C6; 
             color: white; 
@@ -46,6 +45,8 @@
 
         .social-link .social-name {
             font-size: 1.1em;
+            margin-right: auto; /* דוחף את הטקסט לקצה הימני הנגדי */
+            order: 2; /* מיקום שני (ימין) */
         }
 
         .social-link img {
@@ -53,6 +54,9 @@
             height: 30px;
             border-radius: 50%;
             transition: transform 0.2s;
+            order: 1; /* מיקום ראשון (שמאל) */
+            margin-left: 15px; /* מרווח בין הלוגו לטקסט */
+            filter: none; /* ********** ביטול filter: invert() ששיבש צבעים ********** */
         }
 
         .social-link:hover img {
