@@ -10,7 +10,7 @@
     --card-bg: #FFFFFF; 
     --border-color: #E0E0E0; 
     
-    /* צבעי הסושיאל נשארים כאן כמשתנים לשימוש חיצוני */
+    /* ********** צבעי הסושיאל הסופיים: כחול כהה יותר ********** */
     --social-bg-color: #5D99C6; 
     --social-hover-color: #407BA3; 
 }
@@ -42,7 +42,7 @@ body {
     background-position: center center; 
     border-radius: 12px; 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    position: relative; /* ********** תיקון: חובה בשביל למקם את הכפתור העליון ********** */
+    position: relative; /* חובה בשביל למקם את הכפתור העליון */
 }
 
 
@@ -66,8 +66,8 @@ h3 {
 }
 
 p {
-    margin-bottom: 25px; /* ********** גודל מרווח מעודכן ********** */
-    font-size: 1.1em; /* ********** גודל פונט מעודכן ********** */
+    margin-bottom: 25px; /* מרווח גדול יותר בין פסקאות */
+    font-size: 1.1em; /* גופן גדול יותר */
 }
 
 ul {
@@ -80,7 +80,7 @@ ul li {
     position: relative;
     margin-bottom: 10px;
     padding-right: 25px;
-    font-size: 1.1em; /* ********** גודל פונט מעודכן ********** */
+    font-size: 1.1em; /* גופן גדול יותר */
 }
 
 ul li::before {
@@ -125,7 +125,7 @@ ul li::before {
     color: white;
 }
 
-/* ********** כללים חדשים: כפתור חזרה לדף הבית בראש הדף ********** */
+/* ********** כפתור חזרה לדף הבית בראש הדף ********** */
 .top-home-button {
     position: absolute;
     left: 30px; /* רווח פנימי שמאלי של הקונטיינר */
@@ -397,15 +397,18 @@ footer {
     /* יישור כפתורים לטור במסכים קטנים */
     .contact-buttons {
         flex-direction: column; 
+        padding-left: 10px; /* תיקון חיתוך */
+        padding-right: 10px; /* תיקון חיתוך */
     }
     
     .button, .whatsapp-button {
         display: block;
-        width: calc(100% - 24px); 
+        width: 95%; /* **תיקון רוחב (מונע חיתוך)** */
         margin-left: auto;
         margin-right: auto;
         font-size: 1em;
         padding: 12px 20px;
+        box-sizing: border-box; /* **תיקון חיתוך (מכיל padding)** */
     }
     .music-links .button {
         width: auto; 
@@ -426,6 +429,16 @@ footer {
         margin: 0 auto 20px auto; /* יוצב במרכז מעל הכותרת */
         font-size: 1em;
         padding: 10px 20px;
+    }
+
+    /* רספונסיביות סושיאל */
+    .social-link {
+        width: 90%; 
+        max-width: 300px;
+    }
+    .social-link img {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -457,5 +470,15 @@ footer {
     .button, .whatsapp-button {
         padding: 10px 15px;
         font-size: 0.9em;
+    }
+    
+    /* רספונסיביות סושיאל */
+    .social-link {
+        width: 100%;
+        padding: 10px 15px;
+    }
+    .social-link img {
+        width: 30px;
+        height: 30px;
     }
 }
