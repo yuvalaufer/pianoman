@@ -1,5 +1,5 @@
 :root {
-    /* צבעים: כחול-ירוק כהה */
+    /* צבעים: כחול-ירוק כהה, כפי שביקשתם */
     --primary-color: #0A4F5B; 
     --secondary-color: #2C7A7B; 
     --accent-color: #FFD700; 
@@ -63,7 +63,7 @@ h3 {
 
 p {
     margin-bottom: 25px; 
-    font-size: 1.1em; /* גופן גדול יותר */
+    font-size: 1.1em; 
 }
 
 ul {
@@ -76,7 +76,7 @@ ul li {
     position: relative;
     margin-bottom: 10px;
     padding-right: 25px;
-    font-size: 1.1em; /* גופן גדול יותר */
+    font-size: 1.1em; 
 }
 
 ul li::before {
@@ -90,7 +90,7 @@ ul li::before {
 
 /* כפתורים כלליים */
 .button {
-    display: inline-flex; /* תוקן ליישור לוגו וטקסט ב-Desktop */
+    display: inline-flex; 
     align-items: center;
     justify-content: center;
     
@@ -240,7 +240,6 @@ ul li::before {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 35px;
-    justify-content: center;
     margin-top: 60px;
 }
 
@@ -411,15 +410,15 @@ footer {
     }
     
     .button, .whatsapp-button {
-        display: flex; /* כדי להכיל לוגו וטקסט בצורה נכונה */
+        display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%; /* רוחב מלא של הבלוק הפנימי */
-        max-width: 350px; /* **מונע מתיחה קיצונית בטאבלט** */
+        width: 100%; 
+        max-width: 350px; 
         margin: 10px auto;
         font-size: 1em;
         padding: 12px 20px;
-        box-sizing: border-box; /* **התיקון שמבטיח שלא יהיה חיתוך** */
+        box-sizing: border-box; 
     }
     
     .music-links .button {
