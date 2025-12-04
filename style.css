@@ -160,18 +160,17 @@ ul li::before {
     top: 30px; 
     font-size: 0.9em;
     padding: 8px 15px;
-    background-color: #25D366; /* ← שונה לירוק-בקבוק */
+    background-color: #2C7A7B; /* ← צבע ירוק-בקבוק */
     color: white;
     z-index: 10;
 }
 .top-home-button:hover {
-    background-color: #1DA851; /* ← כמו ההובר של הוואטסאפ */
+    background-color: #0A4F5B; /* ← הובר כהה כמו הכפתור התחתון */
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* --- חלקים ראשיים --- */
-
 .main-header {
     text-align: center;
     margin-bottom: 50px;
@@ -347,12 +346,22 @@ footer {
     transform: translateY(-4px);
 }
 
+.social-link .social-name {
+    font-size: 1.1em;
+    margin-left: 15px;
+    order: 1;
+}
+
 .social-link img {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     transition: transform 0.2s;
+    order: 2;
+    margin-left: 0;
+    filter: none;
 }
+
 .social-link:hover img {
     transform: scale(1.05);
 }
@@ -392,3 +401,57 @@ footer {
     }
     
     .contact-buttons {
+        flex-direction: column; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .button, .whatsapp-button {
+        display: flex;
+        width: 100%; 
+        max-width: 350px; 
+        margin: 10px auto;
+        font-size: 1em;
+        padding: 12px 20px;
+        box-sizing: border-box; 
+    }
+    
+    .top-home-button {
+        position: static; 
+        display: block;
+        width: 90%; 
+        margin: 0 auto 20px auto; 
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    
+    .social-link {
+        width: 90%; 
+        max-width: 300px;
+    }
+    .social-link img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header h1 { font-size: 2.8em; }
+    .main-header p { font-size: 1.2em; }
+    .profile-image-container { width: 140px; height: 140px; }
+    .about-me-text h2 { font-size: 1.8em; }
+    
+    .navigation-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    .nav-item img {
+        width: 90px;
+        height: 90px;
+    }
+    .nav-item p { font-size: 0.9em; }
+    
+    .button, .whatsapp-button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
+}
