@@ -457,30 +457,28 @@ footer {
 }
 
 /* ==========================================================================
-   תוספות חדשות - תמונות בתוך טקסט
+   תוספות מיוחדות: תמונות וסרטונים בתוך הטקסט
    ========================================================================== */
 
-/* תמונה צפה לשמאל - הטקסט יעטוף אותה מימין */
+/* תמונות בתוך טקסט (צף לשמאל/ימין) */
 .img-left {
     float: left;
-    margin: 5px 20px 15px 0; /* רווח מימין כדי שהטקסט לא יידבק */
+    margin: 5px 20px 15px 0;
     max-width: 40%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* תמונה צפה לימין - הטקסט יעטוף אותה משמאל */
 .img-right {
     float: right;
-    margin: 5px 0 15px 20px; /* רווח משמאל */
+    margin: 5px 0 15px 20px;
     max-width: 40%;
     height: auto;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* תמונה גדולה וממורכזת - שוברת את רצף הטקסט */
 .img-center {
     display: block;
     margin: 30px auto;
@@ -490,7 +488,6 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-/* התאמה למובייל - מבטלת את הציפה כדי שהתמונה לא תהיה קטנה מדי */
 @media (max-width: 600px) {
     .img-left, .img-right {
         float: none;
@@ -498,4 +495,34 @@ footer {
         margin: 20px auto;
         max-width: 100%;
     }
+}
+
+/* --- הגדרות לסרטונים מוטמעים (רספונסיבי) --- */
+.video-responsive {
+    position: relative;
+    padding-bottom: 56.25%; /* יחס 16:9 ליוטיוב */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background-color: #000; /* רקע שחור בזמן טעינה */
+}
+
+.video-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* לרשתות חברתיות שאין להן iframe גמיש (טיקטוק/אינסטגרם) */
+.social-embed {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
 }
