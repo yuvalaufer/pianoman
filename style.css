@@ -1,55 +1,55 @@
 :root {
-    /* צבעים */
-    --primary-color: #0A4F5B; 
-    --secondary-color: #2C7A7B; 
-    --accent-color: #FFD700; 
-    --text-color: #1A365D; 
-    --light-bg: #F8F4F9; 
-    --button-hover: #E6C200; 
-    --footer-bg: #073840; 
-    --card-bg: #FFFFFF; 
-    --border-color: #E0E0E0; 
-    
-    /* צבעי סושיאל */
-    --social-bg-color: #5D99C6; 
-    --social-hover-color: #407BA3; 
+    /* צבעים */
+    --primary-color: #0A4F5B; 
+    --secondary-color: #2C7A7B; 
+    --accent-color: #FFD700; 
+    --text-color: #1A365D; 
+    --light-bg: #F8F4F9; 
+    --button-hover: #E6C200; 
+    --footer-bg: #073840; 
+    --card-bg: #FFFFFF; 
+    --border-color: #E0E0E0; 
+    
+    /* צבעי סושיאל */
+    --social-bg-color: #5D99C6; 
+    --social-hover-color: #407BA3; 
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    color: var(--text-color);
-    direction: rtl; 
-    text-align: right; 
-    line-height: 1.7; 
-    background-color: var(--light-bg);
-    background-image: url('images/site_background.jpg'); 
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    direction: rtl; 
+    text-align: right; 
+    line-height: 1.7; 
+    background-color: var(--light-bg);
+    background-image: url('images/site_background.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
 }
 
 .container {
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 30px;
-    background-image: url('images/background.jpg'); 
-    background-size: cover;
-    background-position: center center;
-    background-color: rgba(255, 255, 255, 0.7); 
-    background-blend-mode: lighten;
-    
-    border-radius: 12px; 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-    position: relative;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 30px;
+    background-image: url('images/background.jpg'); 
+    background-size: cover;
+    background-position: center center;
+    background-color: rgba(255, 255, 255, 0.7); 
+    background-blend-mode: lighten;
+    
+    border-radius: 12px; 
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    position: relative;
 }
 
 h1, h2, h3 {
-    color: var(--primary-color);
-    text-align: center;
-    margin-bottom: 25px;
-    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 700;
 }
 
 h1 { font-size: 3.8em; }
@@ -57,484 +57,495 @@ h2 { font-size: 2.5em; }
 h3 { font-size: 1.8em; }
 
 p {
-    margin-bottom: 25px; 
-    font-size: 1.4em;
+    margin-bottom: 25px; 
+    font-size: 1.4em;
 }
 
 ul {
-    list-style: none;
-    padding-right: 20px;
-    margin-bottom: 25px;
+    list-style: none;
+    padding-right: 20px;
+    margin-bottom: 25px;
 }
 
 ul li {
-    position: relative;
-    margin-bottom: 10px;
-    padding-right: 25px;
-    font-size: 1.1em;
+    position: relative;
+    margin-bottom: 10px;
+    padding-right: 25px;
+    font-size: 1.1em;
 }
 
 ul li::before {
-    content: '🎵';
-    color: var(--secondary-color);
-    position: absolute;
-    right: 0;
-    top: 0;
+    content: '🎵';
+    color: var(--secondary-color);
+    position: absolute;
+    right: 0;
+    top: 0;
 }
 
 /* --- כפתורים --- */
 .button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 14px 28px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 12px 7px;
-    border: none;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 12px 7px;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .button:hover {
-    background-color: var(--primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 .button.accent {
-    background-color: var(--accent-color);
-    color: var(--text-color);
+    background-color: var(--accent-color);
+    color: var(--text-color);
 }
 
 .button.accent:hover {
-    background-color: var(--button-hover);
-    color: white;
+    background-color: var(--button-hover);
+    color: white;
 }
 
 /* כפתור וואטסאפ */
 .whatsapp-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #25D366;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    margin: 12px 7px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25D366;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 12px 7px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
 .whatsapp-button img {
-    width: 26px;
-    height: 26px;
-    margin-right: 10px;
-    filter: none;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    filter: none;
 }
 
 .whatsapp-button:hover {
-    background-color: #1DA851;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: #1DA851;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* לוגו בתוך כפתור רגיל */
 .button.accent img {
-    width: 26px;
-    height: 26px;
-    margin-right: 10px;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
 }
 
 /* --- שינוי הצבע וההובר של הכפתור העליון --- */
 .top-home-button {
-    position: absolute;
-    left: 30px; 
-    top: 30px; 
-    font-size: 0.9em;
-    padding: 8px 15px;
-    background-color: #2C7A7B; /* ← צבע ירוק-בקבוק */
-    color: white;
-    z-index: 10;
+    position: absolute;
+    left: 30px; 
+    top: 30px; 
+    font-size: 0.9em;
+    padding: 8px 15px;
+    background-color: #2C7A7B; /* ← צבע ירוק-בקבוק */
+    color: white;
+    z-index: 10;
 }
 .top-home-button:hover {
-    background-color: #0A4F5B; /* ← הובר כהה כמו הכפתור התחתון */
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    background-color: #0A4F5B; /* ← הובר כהה כמו הכפתור התחתון */
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
 /* --- חלקים ראשיים --- */
 .main-header {
-    text-align: center;
-    margin-bottom: 50px;
-    padding-bottom: 25px;
-    border-bottom: 3px solid var(--secondary-color);
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+    border-bottom: 3px solid var(--secondary-color);
 }
 
 .about-me-section {
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    gap: 40px;
-    margin-bottom: 60px;
-    padding: 40px;
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+    padding: 40px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
 }
 
 .profile-image-container {
-    flex-shrink: 0;
-    width: 220px; 
-    height: 220px; 
-    border-radius: 50%; 
-    overflow: hidden; 
-    border: 6px solid var(--accent-color);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0;
+    width: 220px; 
+    height: 220px; 
+    border-radius: 50%; 
+    overflow: hidden; 
+    border: 6px solid var(--accent-color);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .profile-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
 /* --- GRID ניווט --- */
 .navigation-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 35px;
-    justify-content: center;
-    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
+    justify-content: center;
+    margin-top: 60px;
 }
 
 .nav-item {
-    text-align: center;
-    background-color: var(--card-bg);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.09);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    border: 1px solid var(--border-color);
+    text-align: center;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.09);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid var(--border-color);
 }
 
 .nav-item:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    background-color: var(--light-bg);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    background-color: var(--light-bg);
 }
 
 .nav-item a {
-    text-decoration: none;
-    color: var(--text-color);
-    display: block; 
+    text-decoration: none;
+    color: var(--text-color);
+    display: block; 
 }
 
 .nav-item img {
-    width: 170px;
-    height: 170px;
-    border-radius: 50%; 
-    object-fit: cover;
-    border: 4px solid var(--secondary-color);
-    margin-bottom: 15px;
-    transition: border-color 0.3s ease, transform 0.3s ease;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 4px solid var(--secondary-color);
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-item:hover img {
-    border-color: var(--accent-color);
-    transform: scale(1.05);
+    border-color: var(--accent-color);
+    transform: scale(1.05);
 }
 
 .nav-item p {
-    font-weight: 700;
-    font-size: 1.25em;
-    margin: 0;
-    color: var(--primary-color);
+    font-weight: 700;
+    font-size: 1.25em;
+    margin: 0;
+    color: var(--primary-color);
 }
 
 /* תוכן דף משנה */
 .subpage-content {
-    padding: 40px;
-    background-color: var(--card-bg);
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid var(--border-color);
+    padding: 40px;
+    background-color: var(--card-bg);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid var(--border-color);
 }
 
 .subpage-content h2 {
-    text-align: right;
-    border-bottom: 3px solid var(--secondary-color);
-    padding-bottom: 15px;
-    margin-bottom: 35px;
-    color: var(--primary-color);
+    text-align: right;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 15px;
+    margin-bottom: 35px;
+    color: var(--primary-color);
 }
 
 .music-links {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .music-links .button {
-    padding: 12px 25px;
-    font-size: 1.1em;
+    padding: 12px 25px;
+    font-size: 1.1em;
 }
 
 /* כפתורי יצירת קשר */
 .contact-buttons {
-    text-align: center;
-    margin-top: 50px;
-    border-top: 3px solid var(--secondary-color);
-    padding-top: 30px;
-    
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-wrap: wrap; 
+    text-align: center;
+    margin-top: 50px;
+    border-top: 3px solid var(--secondary-color);
+    padding-top: 30px;
+    
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: wrap; 
 }
 
 footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 25px;
-    background-color: var(--footer-bg);
-    color: white;
-    border-radius: 0 0 12px 12px;
-    font-size: 0.95em;
-    letter-spacing: 0.5px;
+    text-align: center;
+    margin-top: 60px;
+    padding: 25px;
+    background-color: var(--footer-bg);
+    color: white;
+    border-radius: 0 0 12px 12px;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
 }
 
 /* --- קישורי סושיאל --- */
 .social-links {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center;
-    gap: 15px; 
-    margin: 20px auto 40px auto; 
-    max-width: 100%; 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center;
+    gap: 15px; 
+    margin: 20px auto 40px auto; 
+    max-width: 100%; 
 }
 
 .social-link {
-    display: flex; 
-    align-items: center;
-    justify-content: space-between; 
-    width: 260px;
-    background-color: var(--social-bg-color);
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 50px;
-    font-weight: bold;
-    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
-    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
-    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-    transform: translateY(0);
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+    width: 260px;
+    background-color: var(--social-bg-color);
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+    border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
 }
 
 .social-link:hover {
-    background-color: var(--social-hover-color);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
-    transform: translateY(-4px);
+    background-color: var(--social-hover-color);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+    transform: translateY(-4px);
 }
 
 .social-link .social-name {
-    font-size: 1.1em;
-    margin-left: 15px;
-    order: 1;
+    font-size: 1.1em;
+    margin-left: 15px;
+    order: 1;
 }
 
 .social-link img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    transition: transform 0.2s;
-    order: 2;
-    margin-left: 0;
-    filter: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    transition: transform 0.2s;
+    order: 2;
+    margin-left: 0;
+    filter: none;
 }
 
 .social-link:hover img {
-    transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 /* רספונסיביות כללית */
 @media (max-width: 768px) {
-    .container {
-        margin: 15px auto;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    .main-header h1 { font-size: 3.5em; }
-    .main-header p { font-size: 1.6em; }
-    
-    .about-me-section {
-        flex-direction: column;
-        text-align: center;
-        gap: 25px;
-        padding: 30px;
-    }
-    .profile-image-container {
-        width: 180px;
-        height: 180px;
-    }
-    .about-me-text h2 {
-        text-align: center;
-        font-size: 2em;
-    }
-    
-    .navigation-grid {
-        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-        gap: 25px;
-    }
-    .nav-item img {
-        width: 110px;
-        height: 110px;
-    }
-    
-    .contact-buttons {
-        flex-direction: column; 
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-    .button, .whatsapp-button {
-        display: flex;
-        width: 100%; 
-        max-width: 350px; 
-        margin: 10px auto;
-        font-size: 1em;
-        padding: 12px 20px;
-        box-sizing: border-box; 
-    }
-    
-    .top-home-button {
-        position: static; 
-        display: block;
-        width: 90%; 
-        margin: 0 auto 20px auto; 
-        font-size: 1em;
-        padding: 10px 20px;
-    }
-    
-    .social-link {
-        width: 90%; 
-        max-width: 300px;
-    }
-    .social-link img {
-        width: 35px;
-        height: 35px;
-    }
+    .container {
+        margin: 15px auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .main-header h1 { font-size: 3.5em; }
+    .main-header p { font-size: 1.6em; }
+    
+    .about-me-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+        padding: 30px;
+    }
+    .profile-image-container {
+        width: 180px;
+        height: 180px;
+    }
+    .about-me-text h2 {
+        text-align: center;
+        font-size: 2em;
+    }
+    
+    .navigation-grid {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+        gap: 25px;
+    }
+    .nav-item img {
+        width: 110px;
+        height: 110px;
+    }
+    
+    .contact-buttons {
+        flex-direction: column; 
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .button, .whatsapp-button {
+        display: flex;
+        width: 100%; 
+        max-width: 350px; 
+        margin: 10px auto;
+        font-size: 1em;
+        padding: 12px 20px;
+        box-sizing: border-box; 
+    }
+    
+    .top-home-button {
+        position: static; 
+        display: block;
+        width: 90%; 
+        margin: 0 auto 20px auto; 
+        font-size: 1em;
+        padding: 10px 20px;
+    }
+    
+    .social-link {
+        width: 90%; 
+        max-width: 300px;
+    }
+    .social-link img {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 @media (max-width: 480px) {
-    .main-header h1 { font-size: 2.8em; }
-    .main-header p { font-size: 1.2em; }
-    .profile-image-container { width: 140px; height: 140px; }
-    .about-me-text h2 { font-size: 1.8em; }
-    
-    .navigation-grid {
-        grid-template-columns: repeat(2, 1fr); 
-        gap: 15px;
-    }
-    .nav-item img {
-        width: 90px;
-        height: 90px;
-    }
-    .nav-item p { font-size: 0.9em; }
-    
-    .button, .whatsapp-button {
-        padding: 10px 15px;
-        font-size: 0.9em;
-    }
+    .main-header h1 { font-size: 2.8em; }
+    .main-header p { font-size: 1.2em; }
+    .profile-image-container { width: 140px; height: 140px; }
+    .about-me-text h2 { font-size: 1.8em; }
+    
+    .navigation-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+    }
+    .nav-item img {
+        width: 90px;
+        height: 90px;
+    }
+    .nav-item p { font-size: 0.9em; }
+    
+    .button, .whatsapp-button {
+        padding: 10px 15px;
+        font-size: 0.9em;
+    }
 }
 
 /* ==========================================================================
-   תוספות מיוחדות: תמונות וסרטונים בתוך הטקסט
-   ========================================================================== */
+   תוספות מיוחדות: תמונות וסרטונים בתוך הטקסט
+   ========================================================================== */
 
 /* תמונות בתוך טקסט (צף לשמאל/ימין) */
 .img-left {
-    float: left;
-    margin: 5px 20px 15px 0;
-    max-width: 40%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    float: left;
+    margin: 5px 20px 15px 0;
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 /* *** זהו התיקון שביקשת עבור התמונה הקטנה ב-vocals.html *** */
 .img-left-small {
-    float: left;
-    margin: 5px 20px 15px 0;
-    max-width: 25%; /* הקטנת הרוחב המקסימלי */
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    float: left;
+    margin: 5px 20px 15px 0;
+    max-width: 25%; /* הקטנת הרוחב המקסימלי */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 600px) {
-    .img-left-small, .img-left, .img-right {
-        float: none;
-        display: block;
-        margin: 20px auto;
-        max-width: 100%;
-    }
+    .img-left-small, .img-left, .img-right {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+    }
 }
 /* *************************************************************** */
 
 .img-right {
-    float: right;
-    margin: 5px 0 15px 20px;
-    max-width: 40%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    float: right;
+    margin: 5px 0 15px 20px;
+    max-width: 40%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .img-center {
-    display: block;
-    margin: 30px auto;
-    max-width: 80%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    display: block;
+    margin: 30px auto;
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
 
 /* --- הגדרות לסרטונים מוטמעים (רספונסיבי) --- */
 .video-responsive {
-    position: relative;
-    padding-bottom: 56.25%; /* יחס 16:9 ליוטיוב */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    margin-bottom: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-    background-color: #000; /* רקע שחור בזמן טעינה */
+    position: relative;
+    padding-bottom: 56.25%; /* יחס 16:9 ליוטיוב */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    background-color: #000; /* רקע שחור בזמן טעינה */
 }
 
 .video-responsive iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
 /* לרשתות חברתיות שאין להן iframe גמיש (טיקטוק/אינסטגרם) */
 .social-embed {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 30px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+
+/* ==========================================================================
+   תיקון גריד הניווט עבור נגנים בעלי גובה קבוע (ספוטיפיי)
+   ========================================================================== */
+.container,
+.subpage-content {
+    /* overflow: auto יוצר BFC (Block Formatting Context) שמכריח את הבלוק
+    להכיל את כל התוכן הפנימי, ובכך "לנקות" את ה-float/position שמשבש את הגריד */
+    overflow: auto; 
 }
