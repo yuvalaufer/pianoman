@@ -366,7 +366,7 @@ footer {
     transform: scale(1.05);
 }
 
-/* רספונסיביות */
+/* רספונסיביות כללית */
 @media (max-width: 768px) {
     .container {
         margin: 15px auto;
@@ -470,6 +470,26 @@ footer {
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
+/* *** זהו התיקון שביקשת עבור התמונה הקטנה ב-vocals.html *** */
+.img-left-small {
+    float: left;
+    margin: 5px 20px 15px 0;
+    max-width: 25%; /* הקטנת הרוחב המקסימלי */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 600px) {
+    .img-left-small, .img-left, .img-right {
+        float: none;
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+    }
+}
+/* *************************************************************** */
+
 .img-right {
     float: right;
     margin: 5px 0 15px 20px;
@@ -488,14 +508,6 @@ footer {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
-@media (max-width: 600px) {
-    .img-left, .img-right {
-        float: none;
-        display: block;
-        margin: 20px auto;
-        max-width: 100%;
-    }
-}
 
 /* --- הגדרות לסרטונים מוטמעים (רספונסיבי) --- */
 .video-responsive {
