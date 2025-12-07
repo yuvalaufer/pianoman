@@ -43,7 +43,6 @@ body {
     border-radius: 12px; 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     position: relative;
-    /* !!! הוסר: overflow: auto כדי לתקן את פריסת דף הבית !!! */
 }
 
 h1, h2, h3 {
@@ -268,8 +267,6 @@ ul li::before {
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid var(--border-color);
-    /* !!! תיקון לגריד: מאלץ את הבלוק לכלול את כל נגני המדיה בתוכו !!! */
-    overflow: auto; 
 }
 
 .subpage-content h2 {
@@ -540,24 +537,4 @@ footer {
     justify-content: center;
     margin-bottom: 30px;
     width: 100%;
-}
-
-
-/* ==========================================================================
-   תיקון גריד הניווט עבור נגנים בעלי גובה קבוע (ספוטיפיי)
-   ========================================================================== */
-.subpage-content {
-    /* שומרים על התיקון רק כאן כדי לכלול את כל נגני המדיה בתוכו */
-    overflow: auto; 
-}
-
-.navigation-grid {
-    /* מוודאים שהגריד מתחיל בצורה נקייה ועם מרווח בטוח */
-    margin-top: 60px; 
-    clear: both; 
-}
-
-.container {
-    /* מאפס את הכלל ששבר את הפריסה הכללית (למקרה שנותר) */
-    overflow: visible; 
 }
