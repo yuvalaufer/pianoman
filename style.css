@@ -214,8 +214,7 @@ ul li::before {
     gap: 35px;
     justify-content: center;
     margin-top: 60px;
-    /* !!! הוספת Clearfix ל-GRID (בכדי לתמוך ב-HTML clear) !!! */
-    clear: both; 
+    clear: both; /* Clearfix: מוודא שהגריד מתחיל נקי מתחת לכל */
 }
 
 .nav-item {
@@ -269,8 +268,7 @@ ul li::before {
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border: 1px solid var(--border-color);
-    /* !!! הוספת Clearfix על מקטע התוכן כדי להכיל את כל הנגנים והתמונות הצפות !!! */
-    overflow: auto; 
+    overflow: auto; /* Clearfix: מכריח את האלמנט להכיל אלמנטים צפים */
 }
 
 .subpage-content h2 {
@@ -304,8 +302,7 @@ ul li::before {
     justify-content: center; 
     align-items: center; 
     flex-wrap: wrap; 
-    /* !!! הוספת Clearfix ל-contact-buttons כדי למנוע דחיפה על ידי נגני המדיה !!! */
-    clear: both;
+    clear: both; /* Clearfix: מוודא שהאלמנט מתחיל נקי */
 }
 
 footer {
@@ -550,12 +547,12 @@ footer {
    תיקון גריד ופריסה (Clearfix) - התיקון שמוודא ששום דבר לא נשבר ב-HTML
    ========================================================================== */
 .subpage-content {
-    /* מונע מתוכן פנימי (כמו תמונות צפות או ווידאו) "לדלוף" החוצה */
+    /* Clearfix: מכריח את האלמנט להכיל אלמנטים צפים */
     overflow: auto; 
 }
 
 .contact-buttons,
 .navigation-grid {
-    /* clear: both מבטיח שהאלמנט מתחיל תמיד בשורה נקייה, מתחת לכל תוכן המדיה */
+    /* Clearfix: מוודא שהאלמנט מתחיל נקי מתחת לכל תוכן המדיה */
     clear: both; 
 }
