@@ -39,7 +39,6 @@ body {
     background-position: center center;
     background-color: rgba(255, 255, 255, 0.7); 
     background-blend-mode: lighten;
-    
     border-radius: 12px; 
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
     position: relative;
@@ -61,6 +60,7 @@ p {
     font-size: 1.4em;
 }
 
+/* רשימות */
 ul {
     list-style: none;
     padding-right: 20px;
@@ -146,24 +146,25 @@ ul li::before {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
 }
 
-/* לוגו בתוך כפתור רגיל */
+/* לוגו בתוך כפתור */
 .button.accent img {
     width: 26px;
     height: 26px;
     margin-right: 10px;
 }
 
-/* --- שינוי הצבע וההובר של הכפתור העליון --- */
+/* --- כפתור חזרה לראש הדף --- */
 .top-home-button {
     position: absolute;
     left: 30px; 
     top: 30px; 
     font-size: 0.9em;
     padding: 8px 15px;
-    background-color: #2C7A7B; 
+    background-color: #2C7A7B;
     color: white;
     z-index: 10;
 }
+
 .top-home-button:hover {
     background-color: #0A4F5B;
     transform: translateY(-2px);
@@ -320,7 +321,6 @@ footer {
     align-items: center;
     gap: 15px; 
     margin: 20px auto 40px auto; 
-    max-width: 100%; 
 }
 
 .social-link {
@@ -337,19 +337,15 @@ footer {
     transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
     border-bottom: 3px solid rgba(0, 0, 0, 0.2);
-    transform: translateY(0);
 }
 
 .social-link:hover {
     background-color: var(--social-hover-color);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
     transform: translateY(-4px);
 }
 
 .social-link .social-name {
     font-size: 1.1em;
-    margin-left: 15px;
-    order: 1;
 }
 
 .social-link img {
@@ -357,8 +353,6 @@ footer {
     height: 30px;
     border-radius: 50%;
     transition: transform 0.2s;
-    order: 2;
-    margin-left: 0;
 }
 
 .social-link:hover img {
@@ -380,6 +374,7 @@ footer {
         gap: 25px;
         padding: 30px;
     }
+
     .profile-image-container {
         width: 180px;
         height: 180px;
@@ -389,14 +384,16 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
         gap: 25px;
     }
+
     .nav-item img {
         width: 110px;
         height: 110px;
     }
     
     .contact-buttons {
-        flex-direction: column; 
+        flex-direction: column;
     }
+
     .button, .whatsapp-button {
         width: 100%; 
         max-width: 350px; 
@@ -411,11 +408,12 @@ footer {
         font-size: 1em;
         padding: 10px 20px;
     }
-    
+
     .social-link {
         width: 90%; 
         max-width: 300px;
     }
+
     .social-link img {
         width: 35px;
         height: 35px;
@@ -426,21 +424,19 @@ footer {
     .main-header h1 { font-size: 2.8em; }
     .main-header p { font-size: 1.2em; }
     .profile-image-container { width: 140px; height: 140px; }
-    
+
     .navigation-grid {
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
+
     .nav-item img {
         width: 90px;
         height: 90px;
     }
 }
 
-/* ========================================================================== */
-/* תמונות וסרטונים בתוך הטקסט */
-/* ========================================================================== */
-
+/* --- תמונות בטקסט --- */
 .img-left {
     float: left;
     margin: 5px 20px 15px 0;
@@ -508,7 +504,7 @@ footer {
     border: none;
 }
 
-/* --- תוספת להפ崑גרם בנייד --- */
+/* --- תיקון אינסטגרם — שלא יגלוש בנייד --- */
 .social-embed {
     width: 100%;
     max-width: 100%;
