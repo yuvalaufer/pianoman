@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>יובל לאופר - איש פסנתר | שיעורי פסנתר, עיבודים קוליים, אולפן ביתי וליווי מוזיקלי</title>
-    <meta name="description" content="האתר של יובל לאופר - איש פסנתר. שיעורי פסנתר, אולפן הקלטות ביתי בפרדס חנה, תרגום שירים, עיבודים קוליים וליווי מוזיקלי.">
-    <link rel="canonical" href="https://yuvalaufer.github.io/pianoman/">
+    <title>יובל לאופר - איש-פסנתר</title>
 
+    <meta name="description" content="יובל לאופר - מוזיקאי, פסנתרן, מעבד ויוצר. שיעורי פסנתר, אולפן הקלטות ביתי, תרגום שירים, עיבודים קוליים וליווי מוזיקלי לתיאטרון פלייבק וזמרים.">
+    <meta name="keywords" content="יובל לאופר, איש פסנתר, פסנתרן, שיעורי פסנתר, אולפן הקלטות ביתי, תרגום שירים, עיבודים קוליים, תיאטרון פלייבק, ליווי זמרים">
+    <meta property="og:title" content="יובל לאופר - איש-פסנתר">
+    <meta property="og:description" content="מוזיקאי ופסנתרן המציע מגוון שירותים מוזיקליים: שיעורים, הקלטות, תרגום וליווי.">
+    <meta property="og:image" content="images/my_profile_pic.jpg">
     <link rel="stylesheet" href="style.css">
     
     <style>
@@ -24,86 +26,115 @@
             display: flex; 
             align-items: center;
             justify-content: space-between; 
-            width: 260px;
+            
+            width: 260px; /* רוחב קבוע */
+            
             background-color: #5D99C6; 
             color: white; 
             text-decoration: none; 
+            
             padding: 10px 15px; 
             border-radius: 50px; 
             font-weight: bold;
             transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+            
             box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45); 
             border-bottom: 3px solid rgba(0, 0, 0, 0.2); 
+            transform: translateY(0);
         }
 
         .social-link:hover {
             background-color: #407BA3; 
-            box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55); 
-            transform: translateY(-3px); 
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+            transform: translateY(-4px); 
+        }
+
+        .social-link .social-name {
+            font-size: 1.1em;
+            margin-left: 15px; /* מרווח בין הטקסט ללוגו */
+            order: 1; /* **טקסט ראשון (ימין) ב-RTL** */
         }
 
         .social-link img {
             width: 30px; 
-            height: 30px; 
-            object-fit: contain; 
+            height: 30px;
+            border-radius: 50%;
+            transition: transform 0.2s;
+            order: 2; /* **לוגו שני (שמאל) ב-RTL** */
+            margin-left: 0; 
+            filter: none; /* ביטול filter: invert() ששיבש צבעים */
         }
 
-        .social-text {
-            flex-grow: 1; 
-            text-align: center; 
+        .social-link:hover img {
+            transform: scale(1.05);
         }
     </style>
-</head>
+    </head>
 <body>
     <div class="container">
         <header class="main-header">
-            <h1>יובל לאופר - איש-פסנתר</h1>
+            <h1>יובל לאופר</h1>
+            <p><strong>איש-פסנתר</strong></p> 
         </header>
 
-        <section class="intro">
-            <img src="images/my_profile_pic.jpg" alt="יובל לאופר - איש פסנתר" class="profile-pic">
-            <p>
-                הי, אני יובל, ואני איש של פסנתר.<br>
-                מוזיקאי, פסנתרן, מלווה, מעבד, ומתרגם שירים.<br>
-                מוזמנים ומוזמנות להכיר את העולם המוזיקלי שלי.
-            </p>
+        <section class="about-me-section">
+            <div class="profile-image-container">
+                <img src="images/my_profile_pic.jpg" alt="יובל לאופר">
+            </div>
+            <div class="about-me-text">
+                <h2>מי אני?</h2>
+                <p>
+                    ברוכים הבאים לאתר שלי :)
+                    אני יובל לאופר, מוזיקאי , פסנתרן, מעבד, ויוצר. 
+                    עם ניסיון רב גם על הבמה - בהרכבים שונים וגם בתיאטרון,  
+                    אני מציע מגוון רחב של שירותים:
+                    משיעורי פסנתר במסלול של ליווי שירים, הקלטות באולפן ביתי,  הורדת תפקידי קלידים להקלטות, ליווי מוזיקלי
+                    בתיאטרון פלייבק וליווי זמרים וזמרות בהופעות והקלטות.
+                </p>
+                <h2>למה "איש פסנתר"?</h2>
+                <p>
+                    השיר "Pianoman" של בילי ג'ואל , הוא שיר שתפס אותי עוד מגיל צעיר. פסנתרן שיושב ומנגן , רואה לנפש של האנשים שמבקרים בבאר ומנגן כדי לשמח אותם ולהקל על החיים שלהם,  <br>
+                    זה משהו שאני מתחבר אליו מאוד. וכשהתחלתי לתרגם שירים מאנגלית זה השיר הראשון שתירגמתי (תוכלו לראות אותו בדף התרגומים שלי) <br>
+                    עם השנים המוזיקה הפכה לחלק יותר ויותר גדול בחיים שלי.כל הקשרים המשמעותיים שלי היום באו בדרך זו או אחרת בעקבות המוזיקה, <br>
+                    והפסנתר הוא חלק בלתי נפרד ממי שאני.
+                </p>
+                <p>
+                    אז בין אם אתם מחפשים ללמוד לנגן, להקליט את המוזיקה שלכם, לתרגם שיר אהוב, להקליט פסנתר לשיר שלכם ועוד  - 
+                    מוזמנות ומוזמנים לפנות אלי ואשמח לצאת לדרך יחד
+                </p>
+            </div>
         </section>
 
         <div class="social-links">
-            <a href="https://wa.me/972528549429?text=הי+יובל,+הגעתי+דרך+האתר+שלך" class="social-link" target="_blank">
-                <img src="images/whatsapplogo.png" alt="לוגו וואטסאפ">
-                <span class="social-text">דברו איתי בוואטסאפ</span>
-            </a>
-            <a href="https://www.youtube.com/@yuvallaufer" class="social-link" target="_blank">
-                <img src="images/youtubelogo.png" alt="לוגו יוטיוב">
-                <span class="social-text">הערוץ שלי ביוטיוב</span>
-            </a>
-            <a href="https://www.instagram.com/yuvalaufer/" class="social-link" target="_blank">
-                <img src="images/instagramlogo.png" alt="לוגו אינסטגרם">
-                <span class="social-text">האינסטגרם שלי</span>
-            </a>
-            <a href="https://facebook.com/yuval.laufer" class="social-link" target="_blank">
+            <a href="https://www.facebook.com/yuval.laufer" target="_blank" class="social-link" title="פייסבוק">
+                <span class="social-name">פייסבוק:</span>
                 <img src="images/facebooklogo.png" alt="לוגו פייסבוק">
-                <span class="social-text">הפייסבוק שלי</span>
+            </a>
+            <a href="https://www.instagram.com/laufer.yuval/" target="_blank" class="social-link" title="אינסטגרם">
+                <span class="social-name">אינסטגרם:</span>
+                <img src="images/instushlogo.png" alt="לוגו אינסטגרם">
+            </a>
+            <a href="https://www.tiktok.com/@yuvallaufer235" target="_blank" class="social-link" title="טיקטוק">
+                <span class="social-name">טיקטוק:</span>
+                <img src="images/tiktoklogo.png" alt="לוגו טיקטוק">
             </a>
         </div>
-
         <section class="navigation-grid">
             <div class="nav-item">
                 <a href="lessons.html">
-                    <img src="images/lessons.jpg" alt="שיעורי פסנתר עם יובל לאופר">
+                    <img src="images/lessons.jpg" alt="שיעורי פסנתר">
                     <p>שיעורי פסנתר</p>
                 </a>
             </div>
             <div class="nav-item">
                 <a href="recordings.html">
-                    <img src="images/recordings.jpg" alt="אולפן הקלטות ביתי בפרדס חנה">
+                    <img src="images/recordings.jpg" alt="אולפן הקלטות ביתי">
                     <p>אולפן הקלטות ביתי</p>
                 </a>
             </div>
             <div class="nav-item">
                 <a href="translate.html">
-                    <img src="images/translate.jpg" alt="תרגום שירים מקצועי">
+                    <img src="images/translate.jpg" alt="תרגום שירים">
                     <p>תרגום שירים</p>
                 </a>
             </div>
@@ -127,7 +158,7 @@
             </div>
             <div class="nav-item">
                 <a href="mymusic.html">
-                    <img src="images/mymusic.jpg" alt="המוזיקה של יובל לאופר">
+                    <img src="images/mymusic.jpg" alt="המוזיקה שלי">
                     <p>המוזיקה שלי</p>
                 </a>
             </div>
