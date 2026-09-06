@@ -359,6 +359,59 @@ footer {
     transform: scale(1.05);
 }
 
+/* --- כרטיסיות המלצה (Testimonials) --- */
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.testimonial-card {
+    background-color: var(--light-bg);
+    border: 1px solid var(--border-color);
+    border-right: 5px solid var(--secondary-color);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.testimonial-text {
+    font-size: 1.15em;
+    font-style: italic;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.6;
+    position: relative;
+}
+
+.testimonial-text::before {
+    content: "“";
+    font-size: 2em;
+    color: var(--secondary-color);
+    opacity: 0.4;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+.testimonial-author {
+    font-weight: bold;
+    font-size: 1.05em;
+    color: var(--primary-color);
+    margin: 0;
+    text-align: left;
+}
+
 /* רספונסיביות כללית */
 @media (max-width: 768px) {
     .container {
